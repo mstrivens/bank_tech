@@ -24,13 +24,6 @@ describe Account do
     end
   end
 
-  # describe '#save_to_transaction_history' do
-  #   let(:transaction) { Transaction.new('date', 1, 0, 1) }
-  #   it 'saves the transaction instance to the transaction history' do
-  #     expect(subject.save_to_transaction_history(:transaction)).to eq([:transaction])
-  #   end
-  # end
-
   describe '#credit' do
     context 'when an account is creditted it adds to the account balance' do
       it 'adds 1 to the balance' do
@@ -54,12 +47,6 @@ describe Account do
           expect(Account::DEFAULT_CHARGE).to eq(0)
         end
       end
-
-      # context 'it adds credit to a transaction object' do
-      #   it 'adds 1 credit to a transaction object' do
-      #     expect(subject.credit(1)).to be_instance_of(Transaction)
-      #   end
-      # end
     end
   end
 
@@ -78,12 +65,6 @@ describe Account do
         subject.debit(2)
         expect(subject.balance).to eq (8)
       end
-
-      # context 'it adds debit to a transaction object' do
-      #   it 'adds 1 debit to a transaction object' do
-      #     expect(subject.debit(1)).to be_instance_of(Transaction)
-      #   end
-      # end
     end
   end
 end
