@@ -10,7 +10,7 @@ class Account
 
   def credit(amount)
     add_credit_to_balance(amount)
-    create_credit_transaction(amount)
+    save_to_transaction_history(new_credit_transaction(amount))
   end
 
   def debit(amount)
@@ -18,11 +18,11 @@ class Account
     create_debit_transaction(amount)
   end
 
+  private
+
   def save_to_transaction_history(transaction)
     @transaction_history.push(transaction)
   end
-
-  private
 
   def subtract_debit_from_balance(amount)
     @balance -= amount
@@ -32,7 +32,7 @@ class Account
     @balance += amount
   end
 
-  def create_credit_transaction(amount)
+  def new_credit_transaction(amount)
     Transaction.new(@date, amount, 0, @balance)
   end
 
