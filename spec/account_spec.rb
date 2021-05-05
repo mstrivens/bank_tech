@@ -33,4 +33,17 @@ describe Account do
       end
     end
   end
+
+  describe '#debit' do
+    before do
+      subject.credit(10)
+    end
+
+    context 'when the account is debitted is subtracts from the account balance' do
+      it 'takes 1 from the balance' do
+        subject.debit(1)
+        expect(subject.balance).to eq (9)
+      end
+    end
+  end
 end

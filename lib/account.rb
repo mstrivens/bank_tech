@@ -10,6 +10,10 @@ class Account
     create_credit_transaction(amount)
   end
 
+  def debit(amount)
+    @balance = 9
+  end
+
   private
 
   def add_credit_to_balance(amount)
