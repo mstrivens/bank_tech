@@ -44,6 +44,10 @@ describe Account do
         subject.debit(1)
         expect(subject.balance).to eq (9)
       end
+      it 'takes 2 from the balance' do
+        subject.debit(2)
+        expect(subject.balance).to eq (8)
+      end
     end
   end
 end
