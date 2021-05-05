@@ -26,11 +26,11 @@ class Account
   end
 
   def create_credit_transaction(amount)
-    Transaction.new(amount, 0)
+    Transaction.new(amount, 0, @balance)
   end
 
   def create_debit_transaction(amount)
-    Transaction.new(0, amount)
+    Transaction.new(0, amount, @balance)
   end
 
 end
