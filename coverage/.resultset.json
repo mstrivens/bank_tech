@@ -133,12 +133,19 @@
           null,
           1,
           1,
+          1,
+          2,
+          null,
+          null,
           null
         ]
       },
       "/Users/maxstrivens/Documents/Programming/Projects/Ruby/makers_learning/week_10/bank_tech/lib/statement.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -193,6 +200,6 @@
         ]
       }
     },
-    "timestamp": 1620225588
+    "timestamp": 1620226364
   }
 }
