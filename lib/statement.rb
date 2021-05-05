@@ -12,7 +12,7 @@ class Statement
 
   def print_transactions(transactions)
     transactions.each {|element|
-    print "#{element.date} || #{element.credit} || #{element.debit} || #{element.balance}"
+    puts "#{element.date} || #{element.credit} || #{element.debit} || #{element.balance}"
   }
   end
 end

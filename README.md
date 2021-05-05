@@ -1,5 +1,30 @@
 # Bank Tech Test
 
+## Using the program
+- Fork/Clone the repo
+- Clone to local repo
+- Run bundler
+
+- Run irb
+- require './lib/transaction.rb'
+- require './lib/account.rb'
+- require './lib/statement.rb'
+
+- account = Account.new
+- account.credit(10)
+- account.credit(20)
+- account.debit(10)
+
+- statement = Statement.new
+- statement.print_statement(account.transaction_history)
+- This will print off the statement
+
+### Tests
+- Run RSpec
+
+### Linter
+- Run Rubocop
+
 ## Specification
 
 ### Requirements
@@ -58,3 +83,9 @@ My outcome was a project that was defined by my difficulties previously. My issu
   * In saving the transaction as a string it hardcoded the information in a string format that didn't allow any further manipulation or interaction
   * I felt it wasn't the responsibility of the transaction class to change the balance of the account.
 In addition my previous approach was based on extracting classes when they weren't neccesary, I found this approach made made my tests redundant regularly and meant i had to change them a lot which goes against the fundamental principles of TDD.
+
+
+## Further Work
+
+- I have completed 95% of what i intended although given more time would implement the following:
+  * Reversing the iteration through he transaction history so it showed newest transactions first
