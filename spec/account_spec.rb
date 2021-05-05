@@ -18,6 +18,10 @@ describe Account do
     it 'saves transaction objects to an array' do
       expect{ subject.credit(1) }.to change{ subject.transaction_history }
     end
+
+    it 'saves transaction objects to an array' do
+      expect{ subject.debit(1) }.to change{ subject.transaction_history }
+    end
   end
 
   # describe '#save_to_transaction_history' do
@@ -69,11 +73,11 @@ describe Account do
         expect(subject.balance).to eq (8)
       end
 
-      context 'it adds debit to a transaction object' do
-        it 'adds 1 debit to a transaction object' do
-          expect(subject.debit(1)).to be_instance_of(Transaction)
-        end
-      end
+      # context 'it adds debit to a transaction object' do
+      #   it 'adds 1 debit to a transaction object' do
+      #     expect(subject.debit(1)).to be_instance_of(Transaction)
+      #   end
+      # end
     end
   end
 end
