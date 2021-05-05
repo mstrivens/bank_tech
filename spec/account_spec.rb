@@ -1,7 +1,6 @@
 require 'account'
 
 describe Account do
-  let(:transaction) { Transaction.new(credit) }
 
   describe '#balance' do
     it 'initializes on zero' do
