@@ -1,6 +1,7 @@
 class Account
   attr_reader :balance, :transaction_history, :date
   STARTING_BALANCE = 0
+  DEFAULT_CHARGE = 0
 
   def initialize
     @balance = STARTING_BALANCE
@@ -33,10 +34,10 @@ class Account
   end
 
   def new_credit_transaction(amount)
-    Transaction.new(@date, amount, 0, @balance)
+    Transaction.new(@date, amount, DEFAULT_CHARGE, @balance)
   end
 
   def new_debit_transaction(amount)
-    Transaction.new(@date, 0, amount, @balance)
+    Transaction.new(@date, DEFAULT_CHARGE, amount, @balance)
   end
 end

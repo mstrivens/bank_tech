@@ -49,6 +49,12 @@ describe Account do
         expect(subject.balance).to eq(3)
       end
 
+      context 'it adds a default amount of debit when a credit is done' do
+        it 'adds a defult of 0 to the debit instance' do
+          expect(Account::DEFAULT_CHARGE).to eq(0)
+        end
+      end
+
       # context 'it adds credit to a transaction object' do
       #   it 'adds 1 credit to a transaction object' do
       #     expect(subject.credit(1)).to be_instance_of(Transaction)
