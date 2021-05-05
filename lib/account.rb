@@ -7,5 +7,6 @@ class Account
 
   def credit(amount)
     @balance += amount
+    Transaction.new(amount)
   end
 end
