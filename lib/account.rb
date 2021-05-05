@@ -15,7 +15,7 @@ class Account
 
   def debit(amount)
     subtract_debit_from_balance(amount)
-    save_to_transaction_history(create_debit_transaction(amount))
+    save_to_transaction_history(new_debit_transaction(amount))
   end
 
   private
@@ -36,7 +36,7 @@ class Account
     Transaction.new(@date, amount, 0, @balance)
   end
 
-  def create_debit_transaction(amount)
+  def new_debit_transaction(amount)
     Transaction.new(@date, 0, amount, @balance)
   end
 end
