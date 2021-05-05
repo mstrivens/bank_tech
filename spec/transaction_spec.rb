@@ -22,4 +22,11 @@ describe Transaction do
       expect(transaction.balance).to eq 1
     end
   end
+  describe '#date' do
+    it 'is initialized with the date' do
+      transaction = Transaction.new(0, 0, 1)
+      allow(transaction).to receive(:date).and_return("the_date")
+      expect(transaction.date).to eq "the_date"
+    end
+  end
 end

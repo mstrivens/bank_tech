@@ -1,7 +1,8 @@
 class Transaction
-  attr_reader :credit, :debit, :balance
+  attr_reader :credit, :debit, :balance, :date
 
-  def initialize(credit, debit, balance)
+  def initialize(date=Time.new.strftime("%d/%m/%Y"), credit, debit, balance)
+    @date = date
     @credit = credit
     @debit = debit
     @balance = balance
