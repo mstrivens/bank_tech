@@ -8,6 +8,24 @@ describe Account do
     end
   end
 
+  describe '#date' do
+    it 'returns the date' do
+      expect(subject.date).to be
+    end
+  end
+  #
+  # describe '#transaction_history' do
+  #   it 'saves transaction objects to an array' do
+  #     expect{ subject.credit(1) }.to change{ subject.transaction_history }
+  #   end
+  # end
+  describe '#save_to_transaction_history' do
+    let(:transaction) { Transaction.new('date', 1, 0, 1) }
+    it 'saves the transaction instance to the transaction history' do
+      expect(subject.save_to_transaction_history(:transaction)).to eq([:transaction])
+    end
+  end
+
   describe '#credit' do
     context 'when an account is creditted it adds to the account balance' do
       it 'adds 1 to the balance' do
@@ -26,11 +44,11 @@ describe Account do
         expect(subject.balance).to eq(3)
       end
 
-      context 'it adds credit to a transaction object' do
-        it 'adds 1 credit to a transaction object' do
-          expect(subject.credit(1)).to be_instance_of(Transaction)
-        end
-      end
+      # context 'it adds credit to a transaction object' do
+      #   it 'adds 1 credit to a transaction object' do
+      #     expect(subject.credit(1)).to be_instance_of(Transaction)
+      #   end
+      # end
     end
   end
 
