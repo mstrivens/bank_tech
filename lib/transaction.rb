@@ -7,5 +7,4 @@ class Transaction
     @debit = debit
     @balance = balance
   end
-
 end
