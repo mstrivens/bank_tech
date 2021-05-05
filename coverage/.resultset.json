@@ -87,9 +87,9 @@
           1,
           null,
           1,
-          9,
-          9,
-          9,
+          10,
+          10,
+          10,
           null,
           null,
           1,
@@ -130,12 +130,14 @@
         "lines": [
           null,
           1,
+          1,
           null,
+          1,
+          1,
           1,
           1,
           1,
           2,
-          null,
           null,
           null
         ]
@@ -145,12 +147,30 @@
           1,
           1,
           1,
+          1,
+          1,
+          null,
           null,
           null,
           1,
           null,
           1,
           1,
+          null,
+          null
+        ]
+      },
+      "/Users/maxstrivens/Documents/Programming/Projects/Ruby/makers_learning/week_10/bank_tech/lib/transaction.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          null,
+          1,
+          15,
+          15,
+          15,
+          15,
           null,
           null
         ]
@@ -189,23 +209,8 @@
           null,
           null
         ]
-      },
-      "/Users/maxstrivens/Documents/Programming/Projects/Ruby/makers_learning/week_10/bank_tech/lib/transaction.rb": {
-        "lines": [
-          null,
-          1,
-          1,
-          null,
-          1,
-          14,
-          14,
-          14,
-          14,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1620226429
+    "timestamp": 1620227719
   }
 }
