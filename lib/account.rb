@@ -12,6 +12,7 @@ class Account
 
   def debit(amount)
     subtract_debit_from_balance(amount)
+    Transaction.new(0, amount)
   end
 
   private
@@ -25,7 +26,7 @@ class Account
   end
 
   def create_credit_transaction(amount)
-    Transaction.new(amount)
+    Transaction.new(amount, 0)
   end
 
 end
