@@ -4,7 +4,7 @@ describe Account do
 
   describe '#balance' do
     it 'initializes on zero' do
-      expect(subject.balance).to eq 0
+      expect(subject.balance).to eq Account::STARTING_BALANCE
     end
   end
 
