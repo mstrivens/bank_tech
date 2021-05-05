@@ -24,9 +24,8 @@ describe Transaction do
   end
   describe '#date' do
     it 'is initialized with the date' do
-      transaction = Transaction.new("the_date", 0, 0, 1)
-      # allow(transaction).to receive(:date).and_return("the_date")
-      expect(transaction.date).to eq "the_date"
+      transaction = Transaction.new('the_date', 0, 0, 1)
+      expect(transaction.date).to eq 'the_date'
     end
   end
 end

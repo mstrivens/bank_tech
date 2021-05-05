@@ -3,10 +3,11 @@
     "coverage": {
       "/Users/maxstrivens/Documents/Programming/Projects/Ruby/makers_learning/week_10/bank_tech/spec/account_spec.rb": {
         "lines": [
-          1,
+          null,
           null,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -77,8 +78,11 @@
       },
       "/Users/maxstrivens/Documents/Programming/Projects/Ruby/makers_learning/week_10/bank_tech/lib/account.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
+          null,
           1,
           1,
           null,
@@ -125,9 +129,16 @@
       "/Users/maxstrivens/Documents/Programming/Projects/Ruby/makers_learning/week_10/bank_tech/spec/statement_spec.rb": {
         "lines": [
           null,
+          1,
           null,
-          null,
-          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/maxstrivens/Documents/Programming/Projects/Ruby/makers_learning/week_10/bank_tech/lib/statement.rb": {
+        "lines": [
+          1,
           null
         ]
       },
@@ -160,7 +171,6 @@
           1,
           1,
           1,
-          null,
           1,
           null,
           null,
@@ -169,6 +179,7 @@
       },
       "/Users/maxstrivens/Documents/Programming/Projects/Ruby/makers_learning/week_10/bank_tech/lib/transaction.rb": {
         "lines": [
+          null,
           1,
           1,
           null,
@@ -182,6 +193,6 @@
         ]
       }
     },
-    "timestamp": 1620224831
+    "timestamp": 1620225588
   }
 }

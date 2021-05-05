@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'account'
 
 describe Account do
-
   describe '#balance' do
     it 'initializes on zero' do
       expect(subject.balance).to eq Account::STARTING_BALANCE
@@ -16,7 +17,7 @@ describe Account do
 
   describe '#transaction_history' do
     it 'saves transaction objects to an array' do
-      expect{ subject.credit(1) }.to change{ subject.transaction_history }
+      expect { subject.credit(1) }.to change { subject.transaction_history }
     end
 
     it 'saves transaction objects to an array' do

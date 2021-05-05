@@ -1,12 +1,15 @@
+# frozen_string_literal: true
+
 class Account
   attr_reader :balance, :transaction_history, :date
+
   STARTING_BALANCE = 0
   DEFAULT_CHARGE = 0
 
   def initialize
     @balance = STARTING_BALANCE
     @transaction_history = []
-    @date = Time.new.strftime("%d/%m/%Y")
+    @date = Time.new.strftime('%d/%m/%Y')
   end
 
   def credit(amount)
