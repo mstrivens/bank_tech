@@ -9,7 +9,6 @@ class Account
   def initialize
     @balance = STARTING_BALANCE
     @transaction_history = []
-    @date = Time.new.strftime('%d/%m/%Y')
   end
 
   def credit(amount)
@@ -20,6 +19,13 @@ class Account
   def debit(amount)
     subtract_debit_from_balance(amount)
     save_to_transaction_history(new_debit_transaction(amount))
+  end
+
+  def print_statement
+    print "date || credit || debit || balance\n"
+    @transaction_history.reverse.each {|element|
+    print "#{element.date} || #{'%.2f'%element.credit} || #{'%.2f'%element.debit} || #{'%.2f'%element.balance}\n"
+  }
   end
 
   private
@@ -37,10 +43,12 @@ class Account
   end
 
   def new_credit_transaction(amount)
+    @date = Time.new.strftime('%d/%m/%Y')
     Transaction.new(@date, amount, DEFAULT_CHARGE, @balance)
   end
 
   def new_debit_transaction(amount)
+    @date = Time.new.strftime('%d/%m/%Y')
     Transaction.new(@date, DEFAULT_CHARGE, amount, @balance)
   end
 end

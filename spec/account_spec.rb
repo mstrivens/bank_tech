@@ -9,12 +9,6 @@ describe Account do
     end
   end
 
-  describe '#date' do
-    it 'returns the date' do
-      expect(subject.date).to be
-    end
-  end
-
   describe '#transaction_history' do
     it 'saves transaction objects to an array' do
       expect { subject.credit(1) }.to change { subject.transaction_history }
@@ -66,6 +60,23 @@ describe Account do
         subject.debit(2)
         expect(subject.balance).to eq (8)
       end
+    end
+  end
+
+  describe '#print_statement' do
+    before do
+      allow(Time).to receive_message_chain(:new, :strftime).and_return("the_date")
+    end
+    it 'prints out the input with header' do
+      account = Account.new
+      account.credit(1)
+      expect{ account.print_statement }.to output("date || credit || debit || balance\nthe_date || 1.00 || 0.00 || 1.00\n").to_stdout
+    end
+    it 'prints out the input with header' do
+      account = Account.new
+      account.credit(1)
+      account.debit(1)
+      expect{ account.print_statement }.to output("date || credit || debit || balance\nthe_date || 0.00 || 1.00 || 0.00\nthe_date || 1.00 || 0.00 || 1.00\n").to_stdout
     end
   end
 end
