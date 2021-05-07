@@ -22,10 +22,8 @@ class Account
   end
 
   def print_statement
-    print "date || credit || debit || balance\n"
-    @transaction_history.reverse.each {|element|
-    print "#{element.date} || #{'%.2f'%element.credit} || #{'%.2f'%element.debit} || #{'%.2f'%element.balance}\n"
-  }
+    statement = Statement.new
+    statement.print_statement(@transaction_history)
   end
 
   private

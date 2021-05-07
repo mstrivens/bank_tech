@@ -70,13 +70,13 @@ describe Account do
     it 'prints out the input with header' do
       account = Account.new
       account.credit(1)
-      expect{ account.print_statement }.to output("date || credit || debit || balance\nthe_date || 1.00 || 0.00 || 1.00\n").to_stdout
+      expect{ account.print_statement }.to output("Date || Credit || Debit || Balance\nthe_date || 1.00 || 0.00 || 1.00\n").to_stdout
     end
     it 'prints out the input with header' do
       account = Account.new
       account.credit(1)
       account.debit(1)
-      expect{ account.print_statement }.to output("date || credit || debit || balance\nthe_date || 0.00 || 1.00 || 0.00\nthe_date || 1.00 || 0.00 || 1.00\n").to_stdout
+      expect{ account.print_statement }.to output("Date || Credit || Debit || Balance\nthe_date || 0.00 || 1.00 || 0.00\nthe_date || 1.00 || 0.00 || 1.00\n").to_stdout
     end
   end
 end

@@ -12,7 +12,7 @@ describe 'user can credit, debit and print statement from account' do
       account.credit(1000)
       account.credit(2000)
       account.debit(500)
-      expect{ account.print_statement }.to output("date || credit || debit || balance\nthe_date || 0.00 || 500.00 || 2500.00\nthe_date || 2000.00 || 0.00 || 3000.00\nthe_date || 1000.00 || 0.00 || 1000.00\n").to_stdout
+      expect{ account.print_statement }.to output("Date || Credit || Debit || Balance\nthe_date || 0.00 || 500.00 || 2500.00\nthe_date || 2000.00 || 0.00 || 3000.00\nthe_date || 1000.00 || 0.00 || 1000.00\n").to_stdout
     end
   end
 end

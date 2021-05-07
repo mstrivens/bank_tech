@@ -7,12 +7,12 @@ class Statement
   private
 
   def print_header
-    puts ["Date || Credit || Debit || Balance"]
+    print "Date || Credit || Debit || Balance\n"
   end
 
   def print_transactions(transactions)
-    transactions.each {|element|
-    puts "#{element.date} || #{element.credit} || #{element.debit} || #{element.balance}"
+    transactions.reverse.each {|element|
+    print "#{element.date} || #{'%.2f'%element.credit} || #{'%.2f'%element.debit} || #{'%.2f'%element.balance}\n"
   }
   end
 end

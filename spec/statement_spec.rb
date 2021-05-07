@@ -7,6 +7,6 @@ describe Statement do
     @account = Account.new
     @transaction = Transaction.new('the_date', 1, 0, 1)
     @account.transaction_history << @transaction
-    expect{ subject.print_statement(@account.transaction_history) }.to output("Date || Credit || Debit || Balance\nthe_date || 1 || 0 || 1\n").to_stdout
+    expect{ subject.print_statement(@account.transaction_history) }.to output("Date || Credit || Debit || Balance\nthe_date || 1.00 || 0.00 || 1.00\n").to_stdout
   end
 end
