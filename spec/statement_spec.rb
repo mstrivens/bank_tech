@@ -3,10 +3,12 @@ require 'statement'
 require 'transaction'
 
 describe Statement do
-  it 'returns the transaction history' do
-    @account = Account.new
-    @transaction = Transaction.new('the_date', 1, 0, 1)
-    @account.transaction_history << @transaction
-    expect{ subject.print_statement(@account.transaction_history) }.to output("Date || Credit || Debit || Balance\nthe_date || 1.00 || 0.00 || 1.00\n").to_stdout
+  let(:transactions) { [transaction_one, transaction_two] }
+  let(:transaction_one) { instance_double(Transaction, date: 'date_one', credit: 100.00, debit: 0.00, balance: 100.00) }
+  let(:transaction_two) { instance_double(Transaction, date: 'date_two', credit: 0, debit: 10.00, balance: 90.00) }
+  describe '#print_statement' do
+    it 'returns the transaction history' do
+      expect{ subject.print_statement(transactions) }.to output("Date || Credit || Debit || Balance\ndate_two || 0.00 || 10.00 || 90.00\ndate_one || 100.00 || 0.00 || 100.00\n").to_stdout
+    end
   end
 end
