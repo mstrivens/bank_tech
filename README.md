@@ -132,3 +132,6 @@ In addition my previous approach was based on extracting classes when they weren
 [x] Ensure tests mocked where appropriate
 [x] Write a feature test
 [x] Remove the date from initialize in Account class
+
+- My understanding form the feedback was that if you are making an attribute accessible only for the purpose of testing then that is testing for state.
+- My account_balance is accessible to other classes only for that reason but I cant work out a way of testing otherwise. It would be great to get feedback on this.
