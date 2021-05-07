@@ -127,8 +127,8 @@ In addition my previous approach was based on extracting classes when they weren
 [x] Use markdown codeblocks for irb instructions
 [x] Connect Statement and Account classes
 [x] Reverse the statement printing
-[] Remove the attr reader for transaction history
-[] Remove balance attribute from accoutn class
+[x] Remove the attr reader for transaction history
+[] Remove balance attribute from account class
 [x] Ensure tests mocked where appropriate
 [x] Write a feature test
-[x] Remove the date from initialize in Accoutn class
+[x] Remove the date from initialize in Account class
