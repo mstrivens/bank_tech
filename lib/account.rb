@@ -22,8 +22,7 @@ class Account
   end
 
   def print_statement
-    statement = Statement.new
-    statement.print_statement(@transaction_history)
+    Statement.new.print_statement(@transaction_history)
   end
 
   private
