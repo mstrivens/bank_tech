@@ -59,20 +59,20 @@ As a customer
 So I can manage my money
 I would like to be able to add money to my account
 
-As a customer
-So I can manage my money
+As a customer  
+So I can manage my money  
 I would like to see the date I have deposited money and the amount
 
-As a customer
-So i can use my money
+As a customer  
+So i can use my money  
 I would like to be able to withdraw money
 
-As a customer
-So I can manage my money
+As a customer  
+So I can manage my money  
 I would like to see what date I withdrew money and the amount
 
-As a customer
-So I can see my whole account transaction
+As a customer  
+So I can see my whole account transaction  
 I would like to be able to view my deposit and withdrawal history together
 
 ## Planning
