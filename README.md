@@ -55,8 +55,8 @@ date || credit || debit || balance
 
 ### User Stories
 
-As a customer
-So I can manage my money
+As a customer  
+So I can manage my money  
 I would like to be able to add money to my account
 
 As a customer  
